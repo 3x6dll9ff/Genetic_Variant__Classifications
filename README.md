@@ -1,97 +1,97 @@
 # Genetic Variant Classifications
 
-Проект по классификации генетических вариантов на основе данных ClinVar с использованием машинного обучения.
+A machine learning project for classifying genetic variants based on ClinVar data.
 
-## 📋 Описание
+## 📋 Description
 
-Этот проект анализирует конфликтующие генетические варианты из базы данных ClinVar и классифицирует их как **доброкачественные (Benign)** или **патогенные (Pathogenic/Likely Pathogenic)** с использованием алгоритмов машинного обучения.
+This project analyzes conflicting genetic variants from the ClinVar database and classifies them as **Benign** or **Pathogenic/Likely Pathogenic** using machine learning algorithms.
 
-## 🎯 Основные возможности
+## 🎯 Key Features
 
-- Загрузка и предобработка данных из ClinVar
-- Классификация генетических вариантов (Benign vs Pathogenic)
-- Анализ важности признаков для предсказания
-- Визуализация результатов
+- Loading and preprocessing ClinVar data
+- Classification of genetic variants (Benign vs Pathogenic)
+- Feature importance analysis for predictions
+- Results visualization
 
-## 📊 Данные
+## 📊 Data
 
-Проект использует датасет `clinvar_conflicting.csv`, который содержит информацию о генетических вариантах с конфликтующими интерпретациями клинической значимости.
+The project uses the `clinvar_conflicting.csv` dataset, which contains information about genetic variants with conflicting interpretations of clinical significance.
 
-### Основные признаки:
-- **Геномные координаты**: CHROM, POS, REF, ALT
-- **Частоты аллелей**: AF_ESP, AF_EXAC, AF_TGP
-- **Клиническая информация**: CLNSIGINCL, CLNDN, CLNHGVS
-- **Функциональные предсказания**: SIFT, PolyPhen, CADD_PHRED, BLOSUM62
-- **Аннотации**: Consequence, IMPACT, SYMBOL, BIOTYPE
+### Main Features:
+- **Genomic coordinates**: CHROM, POS, REF, ALT
+- **Allele frequencies**: AF_ESP, AF_EXAC, AF_TGP
+- **Clinical information**: CLNSIGINCL, CLNDN, CLNHGVS
+- **Functional predictions**: SIFT, PolyPhen, CADD_PHRED, BLOSUM62
+- **Annotations**: Consequence, IMPACT, SYMBOL, BIOTYPE
 
-## 🔬 Методология
+## 🔬 Methodology
 
-1. **Предобработка данных**:
-   - Упрощение меток классификации из CLNSIGINCL
-   - Фильтрация неоднозначных вариантов
-   - Бинарная классификация: 0 (Benign) и 1 (Pathogenic/Likely Pathogenic)
+1. **Data Preprocessing**:
+   - Simplifying classification labels from CLNSIGINCL
+   - Filtering ambiguous variants
+   - Binary classification: 0 (Benign) and 1 (Pathogenic/Likely Pathogenic)
 
-2. **Машинное обучение**:
-   - Используется Random Forest Classifier
-   - Анализ важности признаков для интерпретации модели
+2. **Machine Learning**:
+   - Random Forest Classifier implementation
+   - Feature importance analysis for model interpretation
 
-## 📈 Результаты
+## 📈 Results
 
 ![Feature Importances](image.png)
 
-График показывает важность различных признаков для классификации генетических вариантов.
+The chart shows the importance of various features for genetic variant classification.
 
-## 🛠️ Технологии
+## 🛠️ Technologies
 
 - **Python 3.12**
-- **pandas** - обработка данных
-- **scikit-learn** - машинное обучение
-- **matplotlib** - визуализация
-- **numpy** - численные вычисления
+- **pandas** - data processing
+- **scikit-learn** - machine learning
+- **matplotlib** - visualization
+- **numpy** - numerical computations
 
-## 🚀 Установка и запуск
+## 🚀 Installation and Usage
 
-1. Клонируйте репозиторий:
+1. Clone the repository:
 ```bash
 git clone https://github.com/3x6dll9ff/Genetic_Variant__Classifications.git
 cd Genetic_Variant__Classifications
 ```
 
-2. Создайте виртуальное окружение:
+2. Create a virtual environment:
 ```bash
 python3.12 -m venv .venv
 source .venv/bin/activate
 ```
 
-3. Установите зависимости:
+3. Install dependencies:
 ```bash
 pip install pandas scikit-learn matplotlib numpy seaborn jupyter
 ```
 
-4. Запустите Jupyter Notebook:
+4. Launch Jupyter Notebook:
 ```bash
 jupyter notebook "Genetic_Variant_ Classifications.ipynb"
 ```
 
-## 📝 Структура проекта
+## 📝 Project Structure
 
 ```
 .
-├── Genetic_Variant_ Classifications.ipynb  # Основной notebook с анализом
-├── clinvar_conflicting.csv                 # Датасет ClinVar
-├── image.png                               # Визуализация важности признаков
-├── .gitignore                              # Git ignore файл
-└── README.md                               # Этот файл
+├── Genetic_Variant_ Classifications.ipynb  # Main analysis notebook
+├── clinvar_conflicting.csv                 # ClinVar dataset
+├── image.png                               # Feature importance visualization
+├── .gitignore                              # Git ignore file
+└── README.md                               # This file
 ```
 
-## 📚 Источники данных
+## 📚 Data Sources
 
-- [ClinVar Database](https://www.ncbi.nlm.nih.gov/clinvar/) - база данных генетических вариантов и их клинической значимости
+- [ClinVar Database](https://www.ncbi.nlm.nih.gov/clinvar/) - database of genetic variants and their clinical significance
 
-## 👨‍💻 Автор
+## 👨‍💻 Author
 
 Danila Kardashevkii
 
-## 📄 Лицензия
+## 📄 License
 
 MIT License
