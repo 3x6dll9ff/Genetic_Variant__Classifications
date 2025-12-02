@@ -90,7 +90,7 @@ jupyter notebook "Genetic_Variant_ Classifications.ipynb"
 
 ## 👨‍💻 Author
 
-Danila Kardashevkii
+Danila Kardashevskii
 
 ## 📄 License
 
